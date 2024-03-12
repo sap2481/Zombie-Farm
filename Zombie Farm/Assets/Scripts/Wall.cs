@@ -12,8 +12,12 @@ public class Wall : MonoBehaviour
 
     bool spaceDownLastFrame;
     bool spaceDownThisFrame;
+
+    //==== PROPERTIES ====
+    public bool GateActive { get { return gateActive; } set { gateActive = value; } }
+    public GameObject GatePrefab { get { return gatePrefab; } }
     
-    // Start is called before the first frame update
+    //==== START ====
     void Start()
     {
         health = 1000;
@@ -24,12 +28,12 @@ public class Wall : MonoBehaviour
         spaceDownLastFrame = false;
     }
 
-    // Update is called once per frame
+    //==== UPDATE ====
     void Update()
     {
         spaceDownThisFrame = Input.GetKeyDown(KeyCode.Space);
         
-        //If Space was just clicked, instantiate the gate
+        /*If Space was just clicked, instantiate the gate
         if (spaceDownThisFrame && spaceDownLastFrame == false)
         {
             if (!gateActive)
@@ -42,7 +46,7 @@ public class Wall : MonoBehaviour
                 Destroy(GameObject.FindGameObjectWithTag("Gate"));
                 gateActive = false;
             }
-        }
+        }*/
 
         spaceDownLastFrame = spaceDownThisFrame;
     }

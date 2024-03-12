@@ -21,7 +21,7 @@ public class Zombie : MonoBehaviour
     {
         position = transform.position;
         speed = 3;
-        health = 100;
+        health = 5;
     }
 
     //==== UPDATE ====

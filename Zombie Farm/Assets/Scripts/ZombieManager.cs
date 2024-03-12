@@ -10,7 +10,7 @@ public class ZombieManager : MonoBehaviour
 
     float spawnCounter;
 
-    //==== PROPERTIES
+    //==== PROPERTIES ====
     public List<Zombie> Zombies { get { return zombies; } }
     
     //==== START ====
